@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Node {
 
   // Instanzvariablen
@@ -19,7 +21,7 @@ public class Node {
   }
 
   public void addOutEdge(Edge e){
-    boolean edgeTest = e.node1 == this;
+    boolean edgeTest = e.getStartNode() == this;
     edgeTest = edgeTest && !this.outEdges.contains(e);
     if(edgeTest) {
       this.outEdges.add(e);
@@ -27,7 +29,7 @@ public class Node {
   }
 
   public void addInEdge(Edge e){
-    boolean edgeTest = e.node2 == this;
+    boolean edgeTest = e.getEndNode() == this;
     edgeTest = edgeTest && !this.inEdges.contains(e);
     if(edgeTest) {
       this.inEdges.add(e);

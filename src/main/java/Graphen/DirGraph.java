@@ -8,8 +8,8 @@ public class DirGraph {
 
   // Konstruktor
   public DirGraph(){
-    this.nodeSet = new ArrayList<Node>;
-    this.edgeSet = new ArrayList<Edge>;
+    this.nodeSet = new ArrayList<Node>();
+    this.edgeSet = new ArrayList<Edge>();
   }
 
   // Methoden
@@ -30,8 +30,8 @@ public class DirGraph {
   }
 
   public void addEdge(Node nodeS, Node nodeE){
-    boolean !testNodeS = this.nodeSet.contains(nodeS);
-    boolean !testNodeE = this.nodeSet.contains(nodeE);
+    boolean testNodeS = !this.nodeSet.contains(nodeS);
+    boolean testNodeE = !this.nodeSet.contains(nodeE);
     if(testNodeS && testNodeE){
     }
 
