@@ -6,10 +6,6 @@ public class Node {
   private int value;
   private int key;
 
-  // Adjacenvy variables
-  private ArrayList<Edge> outEdges;
-  private ArrayList<Edge> inEdges;
-
   // Konstruktor
   public Node(int key, int value) {
     this.key=key;
@@ -18,22 +14,6 @@ public class Node {
 
   public Node(int key) {
     this.key=key;
-  }
-
-  public void addOutEdge(Edge e){
-    boolean edgeTest = e.getStartNode() == this;
-    edgeTest = edgeTest && !this.outEdges.contains(e);
-    if(edgeTest) {
-      this.outEdges.add(e);
-    }
-  }
-
-  public void addInEdge(Edge e){
-    boolean edgeTest = e.getEndNode() == this;
-    edgeTest = edgeTest && !this.inEdges.contains(e);
-    if(edgeTest) {
-      this.inEdges.add(e);
-    }
   }
 
   // Methoden

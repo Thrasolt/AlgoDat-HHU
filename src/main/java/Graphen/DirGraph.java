@@ -1,40 +1,26 @@
-import java.util.*;
-
 public class DirGraph {
 
-  // Instanzvariablen
-  private ArrayList<Node> nodeSet;
-  private ArrayList<Edge> edgeSet;
+  // Instanzvariable
+  private Entry head;
 
-  // Konstruktor
-  public DirGraph(){
-    this.nodeSet = new ArrayList<Node>();
-    this.edgeSet = new ArrayList<Edge>();
-  }
+  public class Entry{
 
-  // Methoden
-  public void addNode(Node node){
-    boolean testNode = !this.nodeSet.contains(node);
-    if(testNode){
-      this.nodeSet.add(node);
-    }
-  }
+    // Instanzvariable
+    private Node node;
+    private Entry next;
+    private EdgeList inEdges;
+    private EdgeList OutEdges;
 
-  public void addEdge(Edge edge){
-    boolean edgeTest = !this.edgeSet.contains(edge);
-    boolean nodeS = !this.nodeSet.contains(edge.getStartNode());
-    boolean nodeE = !this.nodeSet.contains(edge.getEndNode());
-    if(edgeTest && nodeS && nodeE){
-      this.edgeSet.add(edge);
-    }
-  }
+    public class EdgeList{
+      // Instanzvariable
+      private EdgeEntry edgeHead;
 
-  public void addEdge(Node nodeS, Node nodeE){
-    boolean testNodeS = !this.nodeSet.contains(nodeS);
-    boolean testNodeE = !this.nodeSet.contains(nodeE);
-    if(testNodeS && testNodeE){
+      public class EdgeEntry{
+        // Instanzvariable
+        private Edge edge;
+        protected EdgeEntry next;
+      }
     }
 
   }
-
 }
