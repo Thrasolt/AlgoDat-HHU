@@ -5,8 +5,22 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
+    @Test
+    public void testAppHasAGreeting() {
         Main classUnderTest = new Main();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    }
+
+    @Test
+    public void testSorting() {
+      // Quicksort
+      /*
+      Sorting folge1 = new Sorting({9,8,7,6,5,4,3,2,1});
+      assertEquals("1,2,3,4,5,6,7,8,9", folge1.toString());
+      Sorting folge2 = new Sorting({9,8,7,6,5,4,3,2,1});
+      assertEquals("9,11,12,19,34,45,47", folge2.toString());
+      Sorting folge3 = new Sorting({9,8,7,6,5,4,3,2,1});
+      assertEquals("1,2,3,4,5,6,7,8,9", folge3.toString());
+      */
     }
 }
