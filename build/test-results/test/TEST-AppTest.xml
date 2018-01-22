@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-22T08:54:13" hostname="Tims-MacBook-Pro.local" time="0.001">
+<testsuite name="AppTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-22T20:57:31" hostname="ThrasoltLaptop" time="0.001">
   <properties/>
   <testcase name="testAppHasAGreeting" classname="AppTest" time="0.001"/>
   <testcase name="testSorting" classname="AppTest" time="0.0"/>
