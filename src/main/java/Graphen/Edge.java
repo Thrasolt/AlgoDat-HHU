@@ -3,6 +3,7 @@ public class Edge{
   // Instanzvariablen
   private Node node1;
   private Node node2;
+  private Edge next;
 
   // Konstruktor
   public Edge(Node node1, Node node2) {
