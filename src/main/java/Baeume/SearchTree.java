@@ -3,13 +3,68 @@ public class SearchTree{
   // Instanzvariablen
   private TreeNode head;
 
+  // Konstruktor
+  public SearchTree(){
+  }
+
+  public static void rekInsert(TreeNode node, int key){
+    if(node != null){
+      // Left side
+      if(key <= node.getKey()){
+        if(node.getLeft() == null){
+          TreeNode new_node = new TreeNode();
+          new_node.setKey(key);
+          node.setLeft(new_node);
+        } else {
+          // Rekursion
+          rekInsert(node.getLeft(),key);
+        }
+      } else {
+        // Right side
+        if(node.getRight() == null){
+          TreeNode new_node = new TreeNode();
+          new_node.setKey(key);
+          node.setRight(new_node);
+        } else {
+          // Rekursion
+          rekInsert(node.getRight(),key);
+        }
+      }
+    }
+  }
+
+  public void insert(int key) {
+    TreeNode new_node = new TreeNode();
+    new_node.setKey(key);
+
+    // Check head
+    if(this.head == null) {
+      this.head = new_node;
+    } else {
+      //Insert inner Node
+      rekInsert(this.head, key);
+    }
+  }
+
+  public void inOrderTreeWalk(){
+    inOrderTreeWalk(this.head);
+  } // inOrderTreeWalk
+
   public void inOrderTreeWalk(TreeNode node){
     if(node != null){
       inOrderTreeWalk(node.getLeft());
-      System.out.println(node.getKey());
+      System.out.print(node.getKey());
       inOrderTreeWalk(node.getRight());
     }
   } // inOrderTreeWalk
+
+  public boolean contains(int key){
+    TreeNode res = srchTree(this.head, key);
+    if(res == null){
+      return false;
+    }
+    return true;
+  }
 
   public static TreeNode srchTree(TreeNode node, int key){
     if(node != null){
@@ -23,5 +78,11 @@ public class SearchTree{
     }
     return null;
   } // srchTree
+
+  // geters und setters
+
+  public TreeNode getHead(){
+    return this.head;
+  }
 
 }

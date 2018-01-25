@@ -12,6 +12,21 @@ public class AppTest {
     }
 
     @Test
+    public void testSrchTrees() {
+      SearchTree testTree= new SearchTree();
+
+
+      int[] testArray = {4,2,6,1,3,5,7};
+      for (int i = 0; i<testArray.length; i++){
+        testTree.insert(testArray[i]);
+      }
+      testTree.inOrderTreeWalk();
+      System.out.println("head key: "+testTree.getHead().getKey());
+      assertEquals(testTree.getHead().getKey(),4);
+      assertEquals(testTree.getHead().getLeft().getKey(),2);
+    }
+
+    @Test
     public void testSorting() {
       // Quicksort
       /*

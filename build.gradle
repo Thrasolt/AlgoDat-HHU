@@ -27,5 +27,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+test {
+    testLogging.exceptionFormat = "full"
+    testLogging.showStandardStreams = true
+}
+
 // Define the main class for the application
 mainClassName = 'Main'
