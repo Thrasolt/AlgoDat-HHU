@@ -46,16 +46,18 @@ public class SearchTree{
     }
   }
 
-  public void inOrderTreeWalk(){
-    inOrderTreeWalk(this.head);
+  public String inOrderTreeWalk(){
+    return inOrderTreeWalk(this.head);
   } // inOrderTreeWalk
 
-  public void inOrderTreeWalk(TreeNode node){
+  public String inOrderTreeWalk(TreeNode node){
+    String output = "";
     if(node != null){
-      inOrderTreeWalk(node.getLeft());
-      System.out.print(node.getKey());
-      inOrderTreeWalk(node.getRight());
+      output = output + inOrderTreeWalk(node.getLeft());
+      output = output + Integer.toString(node.getKey());
+      output = output + inOrderTreeWalk(node.getRight());
     }
+    return output;
   } // inOrderTreeWalk
 
   public boolean contains(int key){

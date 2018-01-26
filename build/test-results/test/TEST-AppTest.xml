@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-01-25T20:18:04" hostname="Tims-MacBook-Pro.local" time="0.002">
+<testsuite name="AppTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-01-26T09:30:23" hostname="Tims-MacBook-Pro.local" time="0.003">
   <properties/>
-  <testcase name="testSrchTrees" classname="AppTest" time="0.001"/>
-  <testcase name="testAppHasAGreeting" classname="AppTest" time="0.0"/>
+  <testcase name="testSrchTrees" classname="AppTest" time="0.002"/>
+  <testcase name="testAppHasAGreeting" classname="AppTest" time="0.001"/>
   <testcase name="testSorting" classname="AppTest" time="0.0"/>
-  <system-out><![CDATA[1234567head key: 4
-]]></system-out>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

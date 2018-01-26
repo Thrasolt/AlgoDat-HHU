@@ -13,17 +13,27 @@ public class AppTest {
 
     @Test
     public void testSrchTrees() {
+
+      // Test 1
       SearchTree testTree= new SearchTree();
-
-
       int[] testArray = {4,2,6,1,3,5,7};
       for (int i = 0; i<testArray.length; i++){
         testTree.insert(testArray[i]);
       }
-      testTree.inOrderTreeWalk();
-      System.out.println("head key: "+testTree.getHead().getKey());
       assertEquals(testTree.getHead().getKey(),4);
       assertEquals(testTree.getHead().getLeft().getKey(),2);
+
+      // Test 2
+      SearchTree testTree2= new SearchTree();
+      int[] testArray2 = {1,2,3,4,5,6,7};
+      for (int i = 0; i<testArray2.length; i++){
+        testTree2.insert(testArray2[i]);
+      }
+      assertEquals("1234567",testTree2.inOrderTreeWalk());
+      assertEquals(testTree2.getHead().getKey(),1);
+      assertEquals(testTree2.getHead().getRight().getKey(),2);
+      assertEquals(testTree2.getHead().getLeft(),null);
+
     }
 
     @Test
