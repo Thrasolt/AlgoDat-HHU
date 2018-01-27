@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SortingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-27T21:51:59" hostname="Tims-MBP.fritz.box" time="0.002">
+  <properties/>
+  <testcase name="testQuickSort" classname="SortingTest" time="0.002"/>
+  <system-out><![CDATA[Quicksort started
+indexLeft start: 0
+Tausche Pivot: 2 1
+Quicksort started
+indexLeft start: 0
+Quicksort started
+indexLeft start: 0
+Tauschprozess
+indexLeft: 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
