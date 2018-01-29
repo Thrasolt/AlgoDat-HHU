@@ -7,27 +7,23 @@ public class SearchTree{
   public SearchTree(){
   }
 
-  public static void rekInsert(TreeNode node, int key){
+  public static void rekInsert(TreeNode node, TreeNode new_node){
     if(node != null){
       // Left side
-      if(key <= node.getKey()){
+      if(new_node.getKey() <= node.getKey()){
         if(node.getLeft() == null){
-          TreeNode new_node = new TreeNode();
-          new_node.setKey(key);
           node.setLeft(new_node);
         } else {
           // Rekursion
-          rekInsert(node.getLeft(),key);
+          rekInsert(node.getLeft(), new_node);
         }
       } else {
         // Right side
         if(node.getRight() == null){
-          TreeNode new_node = new TreeNode();
-          new_node.setKey(key);
           node.setRight(new_node);
         } else {
           // Rekursion
-          rekInsert(node.getRight(),key);
+          rekInsert(node.getRight(), new_node);
         }
       }
     }
@@ -42,7 +38,17 @@ public class SearchTree{
       this.head = new_node;
     } else {
       //Insert inner Node
-      rekInsert(this.head, key);
+      rekInsert(this.head, new_node);
+    }
+  }
+
+  public void insert(TreeNode new_node) {
+    // Check head
+    if(this.head == null) {
+      this.head = new_node;
+    } else {
+      //Insert inner Node
+      rekInsert(this.head, new_node);
     }
   }
 

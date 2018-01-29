@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-28T19:43:40" hostname="Tims-MBP.fritz.box" time="0.001">
+<testsuite name="AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-29T09:22:20" hostname="Tims-MBP.fritz.box" time="0.002">
   <properties/>
-  <testcase name="testAppHasAGreeting" classname="AppTest" time="0.001"/>
+  <testcase name="testAppHasAGreeting" classname="AppTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
