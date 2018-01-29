@@ -22,7 +22,7 @@ public class Sorting{
     int indexRight = right;
     int pivot = series[left + (right-left)/2];
 
-    // Divide into two lists
+    // Tauschprozess
      while (indexLeft <= indexRight) {
        while (series[indexLeft] < pivot) {
            indexLeft++;

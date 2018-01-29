@@ -11,6 +11,10 @@ public class TreeNode{
   public TreeNode(){
   }
 
+  public TreeNode(int key){
+    this.key = key;
+  }
+
   // Methoden
   public int getKey(){
     return this.key;
